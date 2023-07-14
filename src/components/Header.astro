@@ -1,0 +1,39 @@
+<header class="flex h-screen fixed right-8 z-50">
+    <nav class="my-auto">
+        <ul class="flex flex-col gap-5 items-center ">
+            <a href="#home" id="home-menu-item" class="menu-item hover:scale-110 hover:animate-pulse">Inicio</a>
+            <a href="#about" id="about-menu-item" class="menu-item hover:scale-110 hover:animate-pulse">Sobre mí</a>
+            <a href="#abilities" id="abilities-menu-item" class="menu-item hover:scale-110 hover:animate-pulse">Habilidades</a>
+            <a href="#projects" id="projects-menu-item" class="menu-item hover:scale-110 hover:animate-pulse">Proyectos</a>
+        </ul>
+    </nav>
+</header>
+
+<script>
+    const observerOptions = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.8
+    }
+
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const menuItems = document.querySelectorAll(".menu-item")
+
+                menuItems.forEach(menuItem => {
+                    if (menuItem.id.includes(entry.target.id)) {
+                        menuItem.classList.add("scale-110", "animate-pulse")
+                    } else {
+                        menuItem.classList.remove("scale-110", "animate-pulse")
+                    }
+                })
+
+                console.log(entry.target.id)
+            }
+        })
+    }, observerOptions)
+
+    const sections = document.querySelectorAll(".section")
+    sections.forEach(section => observer.observe(section))
+</script>

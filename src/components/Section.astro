@@ -1,0 +1,13 @@
+---
+export interface Props {
+    sectionId: string;
+}
+
+const { sectionId } = Astro.props;
+---
+
+<div class="snap-start">
+    <section id={sectionId} class="section w-full h-screen flex flex-col items-center">
+        <slot />
+    </section>
+</div>
