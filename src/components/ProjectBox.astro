@@ -10,7 +10,7 @@ export interface Props {
 const { title, description, img, githubUrl, webUrl } = Astro.props
 ---
 
-<div class="grid grid-cols-4 mx-auto relative gap-5">
+<div class="grid grid-cols-4 max-md:flex max-md:flex-col mx-auto relative gap-5 snap-center">
     <div class="h-auto">
         <img  src={img} alt={title} class="object-contain min-w-[75px] max-h-52"/>
     </div>

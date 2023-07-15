@@ -1,0 +1,14 @@
+---
+export interface Props {
+    title: string
+    img: string
+    color: string
+    'bgColor': string
+}
+
+const { title, img, color, bgColor } = Astro.props
+---
+
+<div class="rounded-lg flex items-center" style={ "background-color:" + bgColor + "; border-color:" + color + ";" }>
+    <img src={img} alt={title} />
+</div>
