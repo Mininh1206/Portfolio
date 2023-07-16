@@ -1,18 +1,23 @@
 ---
 import ProjectBox from "./ProjectBox.astro";
 import Section from "./Section.astro";
+import TitleSection from "./TitleSection.astro";
 ---
 <Section sectionId="projects">
-    <h2 class="my-24 mb-32 text-4xl font-semibold">Proyectos</h2>
-    <div class="flex flex-col gap-80 pb-60 px-32">
+    <TitleSection>Proyectos</TitleSection>
+    <div class="flex flex-col gap-80 pb-32 px-32
+                max-md:px-10 max-md:gap-28">
         <ProjectBox title="Chat"
-                    description="Chat con Java e interfaz en JavaFx"
+                    description="Chat con Java e interfaz en JavaFx."
+                    img={["./chat/1.png", "./chat/2.png", "./chat/3.png"]}
                     githubUrl="https://github.com/Mininh1206/Chat-JavaFx"/>
-        <ProjectBox title='Ajedrez'
-                    description='Ajedrez con Java e interfaz en JavaFx'
+        <ProjectBox title="Ajedrez"
+                    description="Ajedrez con Java e interfaz en JavaFx."
+                    img={["./ajedrez/1.png", "./ajedrez/2.png"]}
                     githubUrl="https://github.com/Mininh1206/Ajedrez-JavaFx"/>
-        <ProjectBox title='Reproductor de música'
-                    description='Reproductor de música para Android hecho en AndroidStudio con Kotlin'
+        <ProjectBox title="Reproductor de música"
+                    description="Reproductor de música para Android hecho en AndroidStudio con Kotlin."
+                    img={["./chat/1.png", "./chat/2.png", "./chat/3.png"]}
                     githubUrl="https://github.com/Mininh1206/Reproductor-Musica-Android"/>
     </div>
 </Section>

@@ -1,12 +1,19 @@
 ---
 import AbilityBox from "./AbilityBox.astro";
 import Section from "./Section.astro";
+import TitleSection from "./TitleSection.astro";
 
 ---
 
 <Section sectionId="abilities">
-    <h2 class="my-24 mb-32 text-4xl font-semibold">Habilidades</h2>
-    <div class="flex flex-row flex-wrap gap-20 place-content-center px-32">
+    <TitleSection>Habilidades</TitleSection>
+    <div class="flex flex-row flex-wrap gap-20 place-content-center px-36
+                max-sm:gap-10 max-sm:px-10">
+        <AbilityBox title="JavaScript" img="" color="" bgColor="yellow"/>
+        <AbilityBox title="JavaScript" img="" color="" bgColor="yellow"/>
+        <AbilityBox title="JavaScript" img="" color="" bgColor="yellow"/>
+        <AbilityBox title="JavaScript" img="" color="" bgColor="yellow"/>
+        <AbilityBox title="JavaScript" img="" color="" bgColor="yellow"/>
         <AbilityBox title="JavaScript" img="" color="" bgColor="yellow"/>
         <AbilityBox title="JavaScript" img="" color="" bgColor="yellow"/>
         <AbilityBox title="JavaScript" img="" color="" bgColor="yellow"/>

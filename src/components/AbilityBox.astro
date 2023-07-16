@@ -9,6 +9,6 @@ export interface Props {
 const { title, img, color, bgColor } = Astro.props
 ---
 
-<div class="rounded-lg flex items-center" style={ "background-color:" + bgColor + "; border-color:" + color + ";" }>
+<div class="rounded-lg flex items-center p-5" style={ "background-color:" + bgColor + "; border-color:" + color + ";" }>
     <img src={img} alt={title} />
 </div>
