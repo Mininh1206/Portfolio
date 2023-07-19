@@ -8,21 +8,34 @@ export interface Props {
 }
 
 const { title, description, img, githubUrl, webUrl } = Astro.props
+
 ---
 
-<div class="grid grid-cols-2 relative gap-5 p-14 bg-gray-200 rounded-md
-            max-lg:flex max-lg:flex-col
+<div class="flex flex-row relative gap-10 p-14 bg-gray-200 rounded-lg
+            max-lg:flex-col
             max-md:p-10
             max-sm:p-8">
-    <div class="snap-x snap-mandatory overflow-x-scroll overflow-y-hidden h-auto flex flex-row border-2 border-gray-300 rounded-md">
-        {img?.map(entry => <img src={entry} alt={title} id={title+(entry.split("/")[2].split(".")[0])} class="object-contain min-w-full snap-center"/>)}
+    <div class="snap-x snap-mandatory overflow-hidden relative flex flex-row rounded-lg w-72
+                [&>button]:absolute [&>button]:rounded-full [&>button]:bg-gray-700/50 [&>button]:p-2 [&>button]:self-center
+                max-lg:self-center">
+        <button id={title.toLowerCase()+"button-left-img"} class="left-3">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="#fff" class="w-6 h-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 12h-15m0 0l6.75 6.75M4.5 12l6.75-6.75" />
+            </svg>                            
+        </button>
+        {img?.map(entry => <img src={entry} alt={title} id={title.toLowerCase()+(entry.split("/")[2].split(".")[0])} class="object-contain min-w-full snap-center"/>)}
+        <button id={title.toLowerCase()+"button-right-img"} class="right-3">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="#fff" class="w-6 h-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75" />
+            </svg>              
+        </button>
     </div>
     <!--<footer class="flex flex-nowrap flex-row place-content-center gap-10 text-7xl">
         {img?.map(entry => <a href={"#"+title+(entry.split("/")[2].split(".")[0])} class="hover:text-gray-600">·</a>)}
     </footer>-->
-    <div class="flex flex-col justify-center gap-5">
-        <h3 class="text-2xl">{title}</h3>
-        <p>{description}</p>
+    <div class="flex flex-col justify-center gap-6 max-w-md">
+        <h3 class="text-3xl font-bold">{title}</h3>
+        <p class="text-lg font-semibold">{description}</p>
         <footer class="flex flex-row gap-5 justify-start">
             {!!githubUrl && (
                 <a href={githubUrl} class="w-5">
@@ -37,3 +50,17 @@ const { title, description, img, githubUrl, webUrl } = Astro.props
         </footer>
     </div>
 </div>
+
+<!--<script>
+    const leftButton = document.querySelector("#"+title.toLowerCase()+"button-left-img")
+    const rightButton = document.querySelector("#"+title.toLowerCase()+"button-right-img")
+
+    leftButton.addEventListener('click', event => {
+        console.log("left")
+    })
+
+    rightButton.addEventListener('click', event => {
+        console.log("right")
+    })
+
+</script>-->

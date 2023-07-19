@@ -5,17 +5,14 @@ import TitleSection from "./TitleSection.astro";
 ---
 <Section sectionId="projects">
     <TitleSection>Proyectos</TitleSection>
-    <div class="flex flex-col gap-52 pb-32 px-80
-                max-xl:px-52
-                max-lg:px-60 max-lg:gap-32
-                max-md:px-36
-                max-sm:px-14">
+    <div class="flex flex-col gap-52 pb-32 mx-44 items-center
+                max-sm:mx-14">
         <ProjectBox title="Chat"
-                    description="Chat con Java e interfaz en JavaFx."
+                    description="Chat en Java usando Sockets. Interfaz hecha con JavaFx y SceneBuilder."
                     img={["./chat/1.png", "./chat/2.png", "./chat/3.png"]}
                     githubUrl="https://github.com/Mininh1206/Chat-JavaFx"/>
         <ProjectBox title="Ajedrez"
-                    description="Ajedrez con Java e interfaz en JavaFx."
+                    description="Ajedrez hecho con Java y JavaFx."
                     img={["./ajedrez/1.png", "./ajedrez/2.png"]}
                     githubUrl="https://github.com/Mininh1206/Ajedrez-JavaFx"/>
         <ProjectBox title="Reproductor de música"
