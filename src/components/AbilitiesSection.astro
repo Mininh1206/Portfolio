@@ -2,24 +2,21 @@
 import AbilityBox from "./AbilityBox.astro";
 import Section from "./Section.astro";
 import TitleSection from "./TitleSection.astro";
-
+import { abilities } from "../data/abilities"
 ---
 
 <Section sectionId="abilities">
     <TitleSection>Habilidades</TitleSection>
     <div class="flex flex-row flex-wrap gap-20 place-content-center px-36 pb-32
                 max-sm:gap-10 max-sm:px-10">
-        <AbilityBox title="JavaScript" img="" color="" bgColor="yellow"/>
-        <AbilityBox title="JavaScript" img="" color="" bgColor="yellow"/>
-        <AbilityBox title="JavaScript" img="" color="" bgColor="yellow"/>
-        <AbilityBox title="JavaScript" img="" color="" bgColor="yellow"/>
-        <AbilityBox title="JavaScript" img="" color="" bgColor="yellow"/>
-        <AbilityBox title="JavaScript" img="" color="" bgColor="yellow"/>
-        <AbilityBox title="JavaScript" img="" color="" bgColor="yellow"/>
-        <AbilityBox title="JavaScript" img="" color="" bgColor="yellow"/>
-        <AbilityBox title="JavaScript" img="" color="" bgColor="yellow"/>
-        <AbilityBox title="JavaScript" img="" color="" bgColor="yellow"/>
-        <AbilityBox title="JavaScript" img="" color="" bgColor="yellow"/>
-        <AbilityBox title="JavaScript" img="" color="" bgColor="yellow"/>
+        {abilities.map(ability => (
+                <AbilityBox id={ability.id}
+                            title={ability.title}
+                            abbreviation={ability.abbreviation}
+                            icon={ability.icon}
+                            color={ability.color}
+                            bgColor={ability.bgColor} />
+            )
+        )}
     </div>
 </Section>

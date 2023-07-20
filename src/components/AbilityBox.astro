@@ -1,14 +1,16 @@
 ---
 export interface Props {
+    id: string
     title: string
-    img: string
+    abbreviation: string
+    icon: string
     color: string
-    'bgColor': string
+    bgColor: string
 }
 
-const { title, img, color, bgColor } = Astro.props
+const { id, title, abbreviation, icon, color, bgColor } = Astro.props
 ---
 
-<div class="rounded-lg flex items-center p-5" style={ "background-color:" + bgColor + "; border-color:" + color + ";" }>
-    <img src={img} alt={title} />
+<div class="rounded-md flex items-center p-5" style={ "background-color:" + bgColor + "; border-color:" + color + ";" }>
+    <img class="w-10" src={icon} alt={title} />
 </div>
