@@ -8,6 +8,22 @@ export const abilities = [
         bgColor: 'midnightblue'
     },
     {
+        id: 'cplusplus',
+        title: 'C++',
+        abbreviation: 'C++',
+        icon: './abilities-icons/cplusplus.svg',
+        color: 'royalblue',
+        bgColor: 'royalblue'
+    },
+    {
+        id: 'csharp',
+        title: 'CSharp',
+        abbreviation: 'C#',
+        icon: './abilities-icons/csharp.svg',
+        color: 'green',
+        bgColor: 'green'
+    },
+    {
         id: 'css',
         title: 'CSS',
         abbreviation: 'CSS',
@@ -38,5 +54,13 @@ export const abilities = [
         icon: './abilities-icons/tailwindcss.svg',
         color: 'skyblue',
         bgColor: 'skyblue'
+    },
+    {
+        id: 'xamarin',
+        title: 'Xamarin',
+        abbreviation: 'Xamarin',
+        icon: './abilities-icons/xamarin.svg',
+        color: 'dodgerblue',
+        bgColor: 'dodgerblue'
     },
 ]
