@@ -1,0 +1,43 @@
+---
+import ProjectBox from "./ProjectBox.astro";
+import Section from "../sections/Section.astro";
+import TitleSection from "../sections/SectionTitle.astro";
+import projects from "../../data/proyects.json"
+---
+<Section sectionId="projects">
+    <TitleSection>Proyectos</TitleSection>
+    <div class="flex flex-col gap-52 pb-32 items-center w-1/2
+                max-xl:w-2/3
+                max-lg:w-1/2
+                max-sm:gap-20 max-sm:w-4/5">
+        {projects.map(project => (
+            <ProjectBox id={project.id}
+                    title={project.title}
+                    description={project.description}
+                    img={project.img}
+                    githubUrl={project.githubUrl} />
+        ))}
+    </div>
+</Section>
+
+<script>
+    const carouselsImagesProjects = document.querySelectorAll(".carousel-images-projects")
+
+    carouselsImagesProjects.forEach(carouselImagesProjects => {
+        carouselImagesProjects.firstElementChild.addEventListener('click', event => {
+            carouselImagesProjects.scrollBy({
+                top: 0,
+                left: -250,
+                behavior: "smooth"
+            })
+        })
+
+        carouselImagesProjects.lastElementChild.addEventListener('click', event => {
+            carouselImagesProjects.scrollBy({
+                top: 0,
+                left: 250,
+                behavior: "smooth"
+            })
+        })
+    })
+</script>
