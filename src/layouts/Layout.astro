@@ -21,16 +21,23 @@ const { title } = Astro.props;
 	</body>
 </html>
 <style is:global>
+:root{
+	--primary: #27374D;
+	--secundary: #9DB2BF;
+	--shadow: #526D82;
+	--terciary: #DDE6ED;
+}
+
 *{
-	color: #27374D;
+	color: var(--primary);
 }
 
 body{
-	background-color: #DDE6ED;
+	background-color: var(--terciary);
 }
 
 .project-div{
-	background-color: #9DB2BF;
-	filter: drop-shadow(1rem 1.25rem 0.8rem #526D82);
+	background-color: var(--secundary);
+	filter: drop-shadow(1rem 1.25rem 0.8rem var(--shadow));
 }
 </style>
