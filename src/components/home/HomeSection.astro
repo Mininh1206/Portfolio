@@ -4,14 +4,17 @@ import Section from "../sections/Section.astro";
 ---
 
 <Section sectionId="home">
-    <div class="grid grid-cols-2 mx-36 my-auto max-h-screen items-center
-                max-lg:flex max-lg:flex-col max-lg:mx-10">
-        <img src="./retrato.webp" title="Retrato" alt="Retrato"
-                class="max-h-screen h-max object-contain
-                        max-lg:max-h-[500px]
-                        max-sm:max-h-[350px]"/>
-        <div class="flex flex-col">
-            <h2 class="flex flex-col text-xl font-bold leading-[60px] max-xl:leading-10">
+    <div class="grid grid-cols-2 w-full h-screen
+                max-lg:grid-cols-1 max-lg:grid-rows-[60%_40%] max-lg:place-items-center">
+        <div class="max-h-screen h-full justify-self-end
+                    max-lg:justify-self-center pt-5">
+            <img src="./retrato.webp" title="Retrato" alt="Retrato"
+                class="object-contain max-h-full"/>
+        </div>
+        <div class="flex flex-col lg:place-content-center
+                    max-lg:self-start">
+            <h2 class="flex flex-col text-xl font-bold leading-[60px]
+                        max-xl:leading-10">
                 <span class="text-[24px] max-xl:text-[20px]">Soy Daniel Marchena Jiménez</span>
                 <span class="text-[37px] max-xl:text-[31px]">Fullstack Developer</span>
                 <span class="text-[44px] max-xl:text-[37px]">Cloud Developer</span>

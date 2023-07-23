@@ -1,12 +1,5 @@
 [
     {
-        "id": "ahorcado",
-        "title": "Ahorcado",
-        "description": "Juego del ahorcado hecho con Windows Forms.",
-        "img": [],
-        "githubUrl": "https://github.com/Mininh1206/Ahorcado-WF"
-    },
-    {
         "id": "ajedrez",
         "title": "Ajedrez",
         "description": "Juego del ajedrez hecho con Java y JavaFx.",
@@ -19,19 +12,5 @@
         "description": "Chat en Java usando Sockets. Interfaz hecha con JavaFx y SceneBuilder.",
         "img": ["./chat/1.png", "./chat/2.png", "./chat/3.png"],
         "githubUrl": "https://github.com/Mininh1206/Chat-JavaFx"
-    },
-    {
-        "id": "lista-compra",
-        "title": "Lista de la compra",
-        "description": "Aplicación de una lista de la compra compartida. Hecha con .NET MAUI y Firebase.",
-        "img": [],
-        "githubUrl": "https://github.com/Mininh1206/MyList"
-    },
-    {
-        "id": "reproductor-musica",
-        "title": "Reproductor de música",
-        "description": "Reproductor de música local para Android. Hecha en AndroidStudio con Kotlin.",
-        "img": [],
-        "githubUrl": "https://github.com/Mininh1206/Reproductor-Musica-Android"
     }
 ]
