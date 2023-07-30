@@ -10,7 +10,7 @@ export interface Props {
 const { id, title, abbreviation, icon, color } = Astro.props
 ---
 
-<div style={"background-color:" + color + "; filter: drop-shadow(0 0 0.75rem " + color + ");"}
+<div style={"background-color:" + color + "; filter: drop-shadow(0 0 0.4rem " + color + ");"}
     class={"rounded-md flex items-center p-5"}>
     <img class="w-10" src={icon} title={title} alt={title} />
 </div>
