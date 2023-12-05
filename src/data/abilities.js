@@ -1,4 +1,4 @@
-[
+export const abilities =[
     {
         "id": "arduino",
         "title": "Arduino",
@@ -11,7 +11,7 @@
         "title": "Astro",
         "abbreviation": "Astro",
         "icon": "./abilities-icons/astro.svg",
-        "color": "midnightblue"
+        "color": "#050118"
     },
     {
         "id": "cplusplus",
@@ -35,6 +35,13 @@
         "color": "royalblue"
     },
     {
+        "id": "dart",
+        "title": "Dart",
+        "abbreviation": "Dart",
+        "icon": "./abilities-icons/dart.svg",
+        "color": "#04599c"
+    },
+    {
         "id": "docker",
         "title": "Docker",
         "abbreviation": "Docker",
@@ -47,6 +54,13 @@
         "abbreviation": ".NET",
         "icon": "./abilities-icons/dotnet.svg",
         "color": "rebeccapurple"
+    },
+    {
+        "id": "flutter",
+        "title": "Flutter",
+        "abbreviation": "Flutter",
+        "icon": "./abilities-icons/flutter.svg",
+        "color": "#3fb6d3"
     },
     {
         "id": "hibernate",
